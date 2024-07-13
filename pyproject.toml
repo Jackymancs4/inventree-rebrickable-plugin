@@ -1,0 +1,31 @@
+[project]
+name = "inventree-rebrickable-plugin"
+version = "0.2"
+description = "rebrickable.it integration for InvenTree"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Plugins",
+]
+keywords = ["inventree", "inventree-plugin", "rebrickable", "inventree-rebrickable"]
+license.text = "MIT"
+authors = [{ name = "Jackymancs4" }]
+
+[project.urls]
+Homepage = "https://github.com/Jackymancs4/inventree-rebrickable-plugin"
+
+[project.entry-points."inventree_plugins"]
+inventree-rebrickable-plugin = "inventree_rebrickable_plugin:rebrickable.RebrickablePlugin"
+
+[tool.isort]
+line_length = 96
+lines_after_imports = 1
+multi_line_output = 5
+combine_as_imports = true
+combine_straight_imports = true
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "INVENTREE", "FIRSTPARTY", "LOCALFOLDER"]
+known_inventree = ["company", "order", "part"]
+known_firstparty = ["plugin"]
